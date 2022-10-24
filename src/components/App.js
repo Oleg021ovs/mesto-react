@@ -6,14 +6,14 @@ import PopupWithForm from "./popupWithForm";
 import ImagePopup from "./imagePopup";
 function App() {
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);
-  const [isAddPlacePopupOpen, setisAddPlacePopupOpen] = useState(false);
-  const [isEditAvatarPopupOpen, setisEditAvatarPopupOpen] = useState(false);
+  const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = useState(false);
+  const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = useState(false);
   const [imagePopupOpen, setImagePopupOpen] = useState(false);
   const [isSelectedCard, setSelectedCard] = useState({});
 
    // попап аватар
   function handleEditAvatarClick() {
-    setisEditAvatarPopupOpen(true);
+    setIsEditAvatarPopupOpen(true);
   }
 // попап профиля
   function handleEditProfileClick() {
@@ -21,7 +21,7 @@ function App() {
   }
 // попап добавление карточки
   function handleAddPlaceClick() {
-    setisAddPlacePopupOpen(true);
+    setIsAddPlacePopupOpen(true);
   }
  
   // открытие попап карточки
@@ -32,9 +32,9 @@ function App() {
  
   //закрытие попапов на крестик
   function closeAllPopups() {
-    setisEditAvatarPopupOpen(false);
+    setIsEditAvatarPopupOpen(false);
     setIsEditProfilePopupOpen(false);
-    setisAddPlacePopupOpen(false);
+    setIsAddPlacePopupOpen(false);
     setImagePopupOpen(false);
     setSelectedCard({});
   }
