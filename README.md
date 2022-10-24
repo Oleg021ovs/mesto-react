@@ -10,4 +10,4 @@
 + Api
 + БЭМ
 + запустить проект можно командой npm start
-[Ссылка на мою работу] (https://oleg021ovs.github.io/mesto-react/)
+[Ссылка на мою работу] (https://Oleg021ovs/mesto-react)
