@@ -21,4 +21,11 @@
 
 .elements__like-btn_active {
     background-image: url(../../../images/btn-like.svg);    
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 19px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
  }

@@ -25,7 +25,7 @@ class Api {
     }).then(this._checkResponse);
   }
 
-  editProfile(name, about) {
+  editProfile({name, about}) {
     return fetch(`${this._baseUrl}/users/me`, {
       method: "PATCH",
       headers: this._headers,
@@ -56,21 +56,34 @@ class Api {
       .catch(console.log);
   }
 
-  deleteLike(id) {
-    return fetch(`${this._baseUrl}/cards/${id}/likes`, {
-      method: "DELETE",
-      headers: this._headers,
-    }).then(this._checkResponse);
+  //deleteLike(id) {
+   // return fetch(`${this._baseUrl}/cards/${id}/likes`, {
+    //  method: "DELETE",
+     // headers: this._headers,
+   // }).then(this._checkResponse);
+ // }
+
+  //addLike(id) {
+    //return fetch(`${this._baseUrl}/cards/${id}/likes`, {
+      //method: "PUT",
+      //headers: this._headers,
+    //}).then(this._checkResponse);
+  //}
+
+  changeLikeCardStatus(id, isLiked) {
+    return isLiked
+      ? fetch(`${this._baseUrl}/cards/${id}/likes`, {
+          method: "PUT",
+          headers: this._headers,
+        }).then(this._checkResponse)
+      : fetch(`${this._baseUrl}/cards/${id}/likes`, {
+          method: "DELETE",
+          headers: this._headers,
+        }).then(this._checkResponse);
+        
   }
 
-  addLike(id) {
-    return fetch(`${this._baseUrl}/cards/${id}/likes`, {
-      method: "PUT",
-      headers: this._headers,
-    }).then(this._checkResponse);
-  }
-
-  addAvatar(avatar) {
+  addAvatar({avatar}) {
     return fetch(`${this._baseUrl}/users/me/avatar`, {
       method: "PATCH",
       headers: this._headers,
@@ -89,4 +102,4 @@ const api = new Api({
   },
 });
 
-export default api;
+export {api};
