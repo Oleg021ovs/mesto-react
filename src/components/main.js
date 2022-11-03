@@ -1,17 +1,10 @@
 import React from "react";
-//import profileAvatar from '../images/image.jpg';
-//import { api } from "../utils/Api";
 import profileAddCardButton from "../images/button-img.svg";
 import Card from "./card";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 function Main({ onEditAvatar, onEditProfile, onAddPlace, onCardClick, cards, onCardLike, onCardDelete }) {
-  //const [userName, setUserName] = useState("");
-  //const [userDescription, setUserDescription] = useState("");
-  //const [userAvatar, setUserAvatar] = useState("");
   const currentUser = React.useContext(CurrentUserContext);
-  //const { name, about, avatar} = currentUser;
-  //const [cards, setCards] = useState([]);
-
+  
   return (
     <main className="main">
       <section className="profile">

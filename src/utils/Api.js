@@ -56,20 +56,6 @@ class Api {
       .catch(console.log);
   }
 
-  //deleteLike(id) {
-   // return fetch(`${this._baseUrl}/cards/${id}/likes`, {
-    //  method: "DELETE",
-     // headers: this._headers,
-   // }).then(this._checkResponse);
- // }
-
-  //addLike(id) {
-    //return fetch(`${this._baseUrl}/cards/${id}/likes`, {
-      //method: "PUT",
-      //headers: this._headers,
-    //}).then(this._checkResponse);
-  //}
-
   changeLikeCardStatus(id, isLiked) {
     return isLiked
       ? fetch(`${this._baseUrl}/cards/${id}/likes`, {

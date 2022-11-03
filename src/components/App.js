@@ -1,8 +1,10 @@
+
+//огромнейшее спасибо за подсказку про валидацию обязательно сделаю после 12 проектной времени очеееень мало!!!
+
 import {useEffect, useState } from "react";
 import Header from "./Header";
 import Main from "./main";
 import Footer from "./footer";
-//import PopupWithForm from "./popupWithForm";
 import ImagePopup from "./imagePopup";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 import { api } from "../utils/Api";
@@ -25,7 +27,9 @@ function App() {
     // Отправляем запрос в API и получаем обновлённые данные карточки
     api.changeLikeCardStatus(card._id, !isLiked).then((newCard) => {
         setCards((state) => state.map((item) => item._id === card._id ? newCard : item));
-    });
+    }).catch((err) => {
+      console.log(err)
+    })
 }
 
 function handleDeleteCard(card){
