@@ -1,6 +1,3 @@
-
-//огромнейшее спасибо за подсказку про валидацию обязательно сделаю после 12 проектной времени очеееень мало!!!
-
 import {useEffect, useState } from "react";
 import Header from "./Header";
 import Main from "./main";
