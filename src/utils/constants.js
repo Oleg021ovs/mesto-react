@@ -10,4 +10,4 @@ const objSetting = {
 export {
   objSetting
 };
-//rwgertsrgt
+//rwgertsrgtdfhfghj
